@@ -1,44 +1,55 @@
 import { Container, Row, Col, Tab, Nav } from "react-bootstrap";
 import { ProjectCard } from "./ProjectCard";
-import projImg1 from "../assets/img/GunFT.svg";
-import projImg2 from "../assets/img/project-img2.png";
-import projImg3 from "../assets/img/project-img3.png";
+import projImg1 from "../assets/img/GunFT.png";
+import projImg2 from "../assets/img/RPG Game.png";
+import projImg3 from "../assets/img/Crates.png";
 import colorSharp2 from "../assets/img/color-sharp2.png";
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Carousel from 'react-multi-carousel';
+import 'react-multi-carousel/lib/styles.css';
 
 export const Projects = () => {
+
+  const responsive = {
+    superLargeDesktop: {
+      // the naming can be any, depends on you.
+      breakpoint: { max: 4000, min: 3000 },
+      items: 3
+    },
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1
+    }
+  };
+
 
   const projects = [
     {
       title: "GunFT",
       description: "Multiplayer FPS game; custom gun mods are minted as NFTs on the NFT Marketplace; React.js Website; Unity game; ERC721 contracts; Deployed on Polygon Mumbai Testnet",
       imgUrl: projImg1,
+      link:"https://devfolio.co/projects/gunft-fe4e"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "RPG Game",
+      description: "A Role Playing Game build using Unity3d and C#.",
       imgUrl: projImg2,
+      link:"https://mahesh-2029.itch.io/rpg"
     },
     {
-      title: "Business Startup",
-      description: "Design & Development",
+      title: "Crates",
+      description: "A casual game build using Unity3d and C#. The player has to dodge the bombs and click on the crates only",
       imgUrl: projImg3,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg1,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg2,
-    },
-    {
-      title: "Business Startup",
-      description: "Design & Development",
-      imgUrl: projImg3,
+      link:"https://mahesh-2029.itch.io/crates"
     },
   ];
 
@@ -67,6 +78,7 @@ export const Projects = () => {
                   <Tab.Content id="slideInUp" className={isVisible ? "animate__animated animate__slideInUp" : ""}>
                     <Tab.Pane eventKey="first">
                       <Row>
+                      <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                         {
                           projects.map((project, index) => {
                             return (
@@ -77,6 +89,7 @@ export const Projects = () => {
                             )
                           })
                         }
+                        </Carousel>
                       </Row>
                     </Tab.Pane>
                     <Tab.Pane eventKey="section">
