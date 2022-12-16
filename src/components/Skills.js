@@ -42,7 +42,7 @@ export const Skills = () => {
                         {/* <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry.<br></br> Lorem Ipsum has been the industry's standard dummy text.</p> */}
                         <Carousel responsive={responsive} infinite={true} className="owl-carousel owl-theme skill-slider">
                             <div className="item">
-                                <img src={meter1} alt="Image" />
+                                <img src={meter1} alt="Image" style={{filter:"invert(100)"}}/>
                                 <h5>Unity3D</h5>
                             </div>
                             <div className="item">
@@ -54,11 +54,11 @@ export const Skills = () => {
                                 <h5>Python</h5>
                             </div>
                             <div className="item">
-                                <img src={meter4} alt="Image" />
+                                <img src={meter4} alt="Image" style={{filter:"invert(100)"}} />
                                 <h5>Git/Github</h5>
                             </div>
                             <div className="item">
-                                <img src={meter5} alt="Image" />
+                                <img src={meter5} alt="Image" style={{filter:"invert(100)"}}/>
                                 <h5>SQL</h5>
                             </div>
                             <div className="item">

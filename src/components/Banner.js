@@ -4,6 +4,7 @@ import headerImg from "../assets/img/header-img.svg";
 import { ArrowRightCircle } from 'react-bootstrap-icons';
 import 'animate.css';
 import TrackVisibility from 'react-on-screen';
+import Resume from '../assets/Mahesh_Chavan_Resume.pdf';
 
 export const Banner = () => {
   const [loopNum, setLoopNum] = useState(0);
@@ -64,7 +65,7 @@ export const Banner = () => {
                     with a proven talent for learning quickly in a
                     results-oriented environment. Team Player.
                     .</p>
-                  {/* <button onClick={() => console.log('connect')}>Let’s Connect <ArrowRightCircle size={25} /></button> */}
+                  <a href={Resume} download>Download Resume<ArrowRightCircle size={25} /></a>
                 </div>}
             </TrackVisibility>
           </Col>
